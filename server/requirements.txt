@@ -1,0 +1,10 @@
+# read tempREADME.md for instructions on how to create virtual env, install packages and run server
+
+numpy
+pandas
+matplotlib
+scikit-learn
+xgboost
+flask
+flask_cors
+flask_restful
