@@ -45,16 +45,25 @@ Navigate to the top left and Make sure to set the documentation to <font color="
 Now,
 
 - cd into your newly made repository that is connected to the remote git.
-- run **npx create-next-app@latest nextjs-blog --use-npm --example "https://github.com/vercel/next-learn/tree/main/basics/learn-starter"**
+- run _npx create-next-app@latest nextjs-blog --use-npm --example "https://github.com/vercel/next-learn/tree/main/basics/learn-starter"_
   This will create a new nextJS project downloading straight from their starting documentation
 
-- run **cd nextjs-blog** to get into the nextjs-blog directory
-- run **npm run dev**
+- run _cd nextjs-blog_ to get into the nextjs-blog directory
+- run _npm run dev_
 
 and boom! Your new nextJS project can now be seen in <a href="http://localhost:3000" target = "_blank"> http://localhost:3000 </a>
 
-#### 
-
+#### Starting the Frontend
 - Install the necessary dependencies
   - npm install sass (for SCSS)
   - 
+
+NextJS's is a file-system based router. This means that the file structure determines how our website navigation works.
+
+**Structure:**
+- pages/index.js -> /
+- pages/hackdavis/index.js -> /hackdavis
+- pages/
+
+
+
