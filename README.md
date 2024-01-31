@@ -53,7 +53,12 @@ Now,
 
 and boom! Your new nextJS project can now be seen in <a href="http://localhost:3000" target = "_blank"> http://localhost:3000 </a>
 
-#### Starting the Frontend
+#### Backend with Flask 
+Side note: some devices use _pip_ others use _pip3_. You should check which version you have by 
+- cd into server folder 
+- run _pip3 install -r requirements.txt_ This will download all the necessary dependencies that our server might need!
+- run _python3 server.py_ This will start the server running it on a different local host. 
+#### Frontend with NextJS
 - Install the necessary dependencies
   - npm install sass (for SCSS)
   - 

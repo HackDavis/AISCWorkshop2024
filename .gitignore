@@ -1,1 +1,13 @@
+#Next.js build output
+.next/
+out/
+
+#Local development environment
+.DS_Store
+
 node_modules/
+.env
+
+# python cache files
+__pycache__/
+*.py[cod]
