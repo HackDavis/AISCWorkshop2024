@@ -31,9 +31,9 @@ You can see a live demo of our website right here!~
 - Connect to Remote Git!
   (Very Rough, will need more edit)
 
-### Creating Folder Structure
+### Creating Directory Structure
 
-Once in the directory that is connected to git, create a folder for frontend (this will be used with NextJS) and server(this will be used with flask)
+Once in the directory that is connected to git, create a directory for frontend (this will be used with NextJS) and server(this will be used with flask)
 
 ```bash
 mkdir frontend
@@ -44,15 +44,11 @@ mkdir server
 
 Side note: some devices use _pip_ others use _pip3_. You should check which version you have by
 
-- cd into server folder
+- cd into server directory
 - run _pip3 install -r requirements.txt_ This will download all the necessary dependencies that our server might need!
 - run _python3 server.py_ This will start the server running it on a different local host.
 
-- Install the necessary dependencies
-  - npm install sass (for SCSS)
-  -
-- create a _.env_ file, and write the following variable into the file.
-  - server_endpoint = 'http://localhost:8080/'
+
 
 # Frontend with NextJS
 
@@ -87,9 +83,9 @@ and boom! Your new nextJS project can now be seen in <a href="http://localhost:3
 
 ## Context
 
-NextJS's is a full-stack project. We are currently using **Pages Router** structure which is the version of NextJS Below 13. <font color="Pink"> Although there is much to cover about the specifics of the projects, we will just be focusing on frontend and how we can deploy so that we can start displaying our favorite ML Projects for the **recruiters!** </font>
+NextJS's is a full-stack project. We are currently using **Pages Router** structure which is the version of NextJS Below 13. <font color="Pink"> Although there is much to cover about the specifics of the projects, we will just be focusing on frontend and how we can deploy so that we can start displaying our favorite ML Projects on your **resume!** </font>
 
-Structure
+### Routing 
 
 - NextJS is a Pages Router is a file-system based router built on the concept of pages. This means that the structure of the project affects how we can navigate within routes, call APIs, etc.
 
@@ -103,3 +99,41 @@ pages/
     └── index.js           # Accessed using the '/hackdavis' route
     └── about.js           # Accessed using the '/hackdavis/about' route
 ```
+
+Directories with `_` as prefixes will not produce a route in the app. This means directories such as 
+```
+pages/
+└── hackdavis/
+    └── index.js
+    └── _components/ #This will not be shown as a route 
+                      (it cannot be accessed via '/hackdavis/_components)   
+
+```
+
+This component directory can be used to store parts which is reusable but also so that our code in _index.js_ looks clean.
+
+## Styling
+We are going to be using SCSS, an extension of the normal css files but with just more SASS :3. 
+
+So go ahead and install SCSS 
+```bash 
+npm install sass
+```
+
+Navigate to the _styles_ directory 
+```
+styles/
+└── global.scss  
+└── Home.module.scss  
+```
+- _global.scss_ is used for global styling, think fonts, title, background color etc.
+- _Home.module.scss_ is what we are going to be styling today. This will be imported to our _index.js_ for styling.
+
+## Index.js and Home.module.scss
+Due to our limited time, a copy of our HTML and SCSS code will be provided in this repo. Just navigate to our _index.js_ and _Home.module.scss_ to take a look!
+
+
+
+
+
+
