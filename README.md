@@ -32,6 +32,9 @@ You can see a live demo of our website right here!~
 - Connect to Remote Git!
   (Very Rough, will need more edit)
 
+
+#### Creating Folder Structure 
+- once in the directory that is connected to git 
 #### NextJS Init
 
 Documentation of NextJS can be found here: <a href="https://nextjs.org/docs" target = "_blank"> NextJS Documentation </a>
@@ -48,8 +51,10 @@ Now,
 - run **cd nextjs-blog** to get into the nextjs-blog directory
 - run **npm run dev**
 
-your new nextJS project can now be seen in <a href="http://localhost:3000" target = "_blank"> http://localhost:3000 </a>
+and boom! Your new nextJS project can now be seen in <a href="http://localhost:3000" target = "_blank"> http://localhost:3000 </a>
 
-####
+#### 
 
-- npm install sass
+- Install the necessary dependencies
+  - npm install sass (for SCSS)
+  - 
