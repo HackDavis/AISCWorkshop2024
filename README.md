@@ -3,10 +3,9 @@
 ### Table of Contents
 
 - [Introduction](#introduction)
-- [Live Demo](#live-demo)
-- [Tools and Frameworks Used](#tools-and-frameworks-used)
 - [Setup](#setup)
-- [Credits](#credits)
+- [Backend with Flask](#backend-with-flask)
+- [Frontend with NextJS](#frontend-with-nextjs)
 
 # Introduction
 
@@ -104,4 +103,3 @@ pages/
     └── index.js           # Accessed using the '/hackdavis' route
     └── about.js           # Accessed using the '/hackdavis/about' route
 ```
-
