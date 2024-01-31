@@ -3,6 +3,8 @@
 
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const Graph = () => {
     const [imageUrl, setImageUrl] = useState('');
@@ -10,8 +12,9 @@ const Graph = () => {
     useEffect(() => {
         const fetchImage = async () => {
             try {
-                const response = await axios.get('http://localhost:8080/first_image', { responseType: 'blob' });
+                const response = await axios.get(`http://localhost:8080/first_image`, { responseType: 'blob' });
                 const imageUrl = URL.createObjectURL(response.data);
+                console.log("image url", imageUrl);
                 setImageUrl(imageUrl);
             } catch (error) {
                 console.error('Error fetching image:', error);
@@ -22,10 +25,10 @@ const Graph = () => {
     }, []);
 
     return (
-        <div>
+        <div style={{}}>
             {imageUrl ? (
                 // <Image />
-                <img src={imageUrl} alt="Generated Image" />
+                <img src={imageUrl} alt="Generated Image" style={{ width: '100%', height: '100%' }} />
             ) : (
                 <p>Loading...</p>
             )}

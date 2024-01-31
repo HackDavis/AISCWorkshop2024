@@ -32,9 +32,10 @@ You can see a live demo of our website right here!~
 - Connect to Remote Git!
   (Very Rough, will need more edit)
 
+#### Creating Folder Structure
 
-#### Creating Folder Structure 
-- once in the directory that is connected to git 
+- once in the directory that is connected to git
+
 #### NextJS Init
 
 Documentation of NextJS can be found here: <a href="https://nextjs.org/docs" target = "_blank"> NextJS Documentation </a>
@@ -53,22 +54,29 @@ Now,
 
 and boom! Your new nextJS project can now be seen in <a href="http://localhost:3000" target = "_blank"> http://localhost:3000 </a>
 
-#### Backend with Flask 
-Side note: some devices use _pip_ others use _pip3_. You should check which version you have by 
-- cd into server folder 
+#### Backend with Flask
+
+Side note: some devices use _pip_ others use _pip3_. You should check which version you have by
+
+- cd into server folder
 - run _pip3 install -r requirements.txt_ This will download all the necessary dependencies that our server might need!
-- run _python3 server.py_ This will start the server running it on a different local host. 
+- run _python3 server.py_ This will start the server running it on a different local host.
+
 #### Frontend with NextJS
+
 - Install the necessary dependencies
   - npm install sass (for SCSS)
-  - 
+  -
+- create a _.env_ file, and write the following variable into the file.
+  - server_endpoint = 'http://localhost:8080/'
 
 NextJS's is a file-system based router. This means that the file structure determines how our website navigation works.
 
+
+
+- import dotenv 
 **Structure:**
+
 - pages/index.js -> /
 - pages/hackdavis/index.js -> /hackdavis
 - pages/
-
-
-

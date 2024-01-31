@@ -22,14 +22,19 @@ $box-bg-color: #173A52;
             width: 100%;
             height: 90%;
             display: grid;
-            grid-template-columns: repeat(2, 2fr);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            flex-wrap: wrap;
             // border: 1px solid black;
             gap: 30px;
 
             &_Card{
+                padding: 20px;
                 flex-shrink: 0;
                 border-radius: 20px;
                 background: #F1E1CE;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
         }
         &_animals{

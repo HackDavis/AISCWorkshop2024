@@ -1,16 +1,22 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.scss';
+import styles from '../../styles/Home.module.scss';
 import Image from 'next/image';
+import Graph from './_components/graph';
+import Models from './_components/models';
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <div className={styles.container_inside}>
         <div className={styles.container_inside_window}>
-        <div className={styles.container_inside_window_Card} />
-        <div className={styles.container_inside_window_Card} />
-        <div className={styles.container_inside_window_Card} />
-        <div className={styles.container_inside_window_Card} />
+          <div className={styles.container_inside_window_Card}>
+            <Graph />
+          </div>
+          <div className={styles.container_inside_window_Card} >
+            <Models />
+          </div>
+          <div className={styles.container_inside_window_Card} />
+          <div className={styles.container_inside_window_Card} />
         </div>
         <div className={styles.container_inside_animals}>
           <Image src="/index/cow.svg" alt="cow" width={100} height={100} />

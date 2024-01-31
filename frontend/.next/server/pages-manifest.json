@@ -2,7 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/graph": "pages/graph.js",
-  "/models": "pages/models.js"
+  "/MLProjects": "pages/MLProjects.js"
 }

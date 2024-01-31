@@ -1,6 +1,14 @@
 #Next.js build output
 .next/
-out/
+.frontend/.next/
+.frontend/out/
+frontend/.next/
+
+# Next.js specific cache files
+.frontend/.next/cache/*
+
+# Next.js tracing files
+.frontend/.next/trace
 
 #Local development environment
 .DS_Store
@@ -11,3 +19,4 @@ node_modules/
 # python cache files
 __pycache__/
 *.py[cod]
+
