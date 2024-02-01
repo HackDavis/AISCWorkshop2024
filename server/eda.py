@@ -14,7 +14,4 @@ def analysis():
     
     plt.figure(figsize=(13,17))
     sns.pairplot(data=df)
-    plt.show()
     plt.savefig('analysis.png')
-
-analysis()

@@ -24,8 +24,8 @@ def get_image():
     return send_file('first_graph.png', mimetype='image/png')
 
 @app.route('/analysis', methods = ['GET'])
-def get_image():
-    analysis()
+def analyse():
+    # analysis()
     return send_file('analysis.png', mimetype='image/png')
 
 @app.route('/models', methods = ['GET', 'POST'])
