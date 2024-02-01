@@ -7,7 +7,8 @@ app = Flask(__name__)
 
 CORS(app, resources={
     r"/*": {
-        "origins": ["https://aisc-workshop2024-kten.vercel.app/"],
+        "origins": ["https://aisc-workshop2024-kten.vercel.app/", "https://aisc-workshop2024-kten-win-chengs-projects.vercel.app/",
+                     "http://localhost:3000"],
         "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
         "allow_headers": ["Content-Type", "Authorization", "X-Requested-With"]
     }
