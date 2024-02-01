@@ -135,3 +135,9 @@ styles/
 ## Index.js and Home.module.scss
 
 Due to our limited time, a copy of our HTML and SCSS code will be provided in this repo. Just navigate to our _index.js_ and _Home.module.scss_ to take a look!
+
+# Deploying
+- Create a vercel account
+- Import the git repository 
+- Click Deploy
+- Deployment Protection Settings Off 
