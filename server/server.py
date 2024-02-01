@@ -4,7 +4,7 @@ from algorithm import run_algorithm
 from flask_restful import Api, Resource
 
 app = Flask(__name__)
-CORS(app, origins=["https://aisc-workshop2024-kten-66z8uhjsc-win-chengs-projects.vercel.app/"])
+CORS(app, origins=["https://aisc-workshop2024-kten-66z8uhjsc-win-chengs-projects.vercel.app/MLProjects"])
 api = Api(app)
 
 
