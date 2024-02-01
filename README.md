@@ -48,8 +48,6 @@ Side note: some devices use _pip_ others use _pip3_. You should check which vers
 - run _pip3 install -r requirements.txt_ This will download all the necessary dependencies that our server might need!
 - run _python3 server.py_ This will start the server running it on a different local host.
 
-
-
 # Frontend with NextJS
 
 ### Init NextJS
@@ -85,7 +83,7 @@ and boom! Your new nextJS project can now be seen in <a href="http://localhost:3
 
 NextJS's is a full-stack project. We are currently using **Pages Router** structure which is the version of NextJS Below 13. <font color="Pink"> Although there is much to cover about the specifics of the projects, we will just be focusing on frontend and how we can deploy so that we can start displaying our favorite ML Projects on your **resume!** </font>
 
-### Routing 
+### Routing
 
 - NextJS is a Pages Router is a file-system based router built on the concept of pages. This means that the structure of the project affects how we can navigate within routes, call APIs, etc.
 
@@ -100,40 +98,40 @@ pages/
     └── about.js           # Accessed using the '/hackdavis/about' route
 ```
 
-Directories with `_` as prefixes will not produce a route in the app. This means directories such as 
+Directories with `_` as prefixes will not produce a route in the app. This means directories such as
+
 ```
 pages/
 └── hackdavis/
     └── index.js
-    └── _components/ #This will not be shown as a route 
-                      (it cannot be accessed via '/hackdavis/_components)   
+    └── _components/ #This will not be shown as a route
+                      (it cannot be accessed via '/hackdavis/_components)
 
 ```
 
 This component directory can be used to store parts which is reusable but also so that our code in _index.js_ looks clean.
 
 ## Styling
-We are going to be using SCSS, an extension of the normal css files but with just more SASS :3. 
 
-So go ahead and install SCSS 
-```bash 
+We are going to be using SCSS, an extension of the normal css files but with just more SASS :3.
+
+So go ahead and install SCSS
+
+```bash
 npm install sass
 ```
 
-Navigate to the _styles_ directory 
+Navigate to the _styles_ directory
+
 ```
 styles/
-└── global.scss  
-└── Home.module.scss  
+└── global.scss
+└── Home.module.scss
 ```
+
 - _global.scss_ is used for global styling, think fonts, title, background color etc.
 - _Home.module.scss_ is what we are going to be styling today. This will be imported to our _index.js_ for styling.
 
 ## Index.js and Home.module.scss
+
 Due to our limited time, a copy of our HTML and SCSS code will be provided in this repo. Just navigate to our _index.js_ and _Home.module.scss_ to take a look!
-
-
-
-
-
-

@@ -1,11 +1,8 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import axios from 'axios';
-import dotenv from 'dotenv';
+import axios from "axios";
 // Define an interface for the model data
-
-dotenv.config();
 
 const Models = () => {
     // const [modelData, setModelData] = useState<ModelData | null>(null);
