@@ -15,6 +15,7 @@ frontend/.next/
 
 node_modules/
 .env
+server/venv
 
 # python cache files
 __pycache__/

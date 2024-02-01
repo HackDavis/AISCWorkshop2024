@@ -45,10 +45,10 @@ mkdir server
 Side note: some devices use _pip_ others use _pip3_. You should check which version you have by
 
 - cd into server directory
+- python -m venv venv on Windows and python3 -m venv venv on mac/Linux
+- run .\venv\Scripts\activate on Windows and source venv/bin/activate on mac/Linux
 - run _pip3 install -r requirements.txt_ This will download all the necessary dependencies that our server might need!
 - run _python3 server.py_ This will start the server running it on a different local host.
-
-
 
 # Frontend with NextJS
 
@@ -63,19 +63,16 @@ Now,
 Going into your newly made repository
 
 ```bash
-cd <directory_name>
+cd frontend
 ```
 
 Create a new nextJS project straight from their starting documentation by running:
 
 ```bash
-npx create-next-app@latest nextjs-blog --use-npm --example "https://github.com/vercel/next-learn/tree/main/basics/learn-starter"
+npx create-next-app@latest . --use-npm --example "https://github.com/vercel/next-learn/tree/main/basics/learn-starter"
 ```
 
-Go into the _nextjs-blog_ directory and start the server!
-
 ```bash
-cd nextjs-blog
 npm run dev
 ```
 
