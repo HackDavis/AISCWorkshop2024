@@ -11,7 +11,7 @@ const Models = () => {
     useEffect(() => {
         const fetchModelData = async () => {
             try {
-                const response = await axios.get(`https://aisc-workshop2024-gvmv21drq-win-chengs-projects.vercel.app/models`);
+                const response = await axios.get(`https://aisc-workshop2024.vercel.app/models`);
                 console.log("response data", response.data.models);
                 setModelData(response.data.models);
                 console.log("model data", modelData);
