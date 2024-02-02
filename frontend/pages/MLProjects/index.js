@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Graph from './_components/graph';
 import Models from './_components/models';
 
-export default function Home() {
+export default function MLProjects() {
   return (
     <div className={styles.container}>
       <div className={styles.container_inside}>

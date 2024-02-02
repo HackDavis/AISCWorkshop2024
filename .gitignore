@@ -1,4 +1,9 @@
-#Next.js build output
+# virtual environment (backend)
+myenv
+myenv2
+myenv3
+
+# Next.js build output
 .next/
 .frontend/.next/
 .frontend/out/
@@ -20,3 +25,5 @@ node_modules/
 __pycache__/
 *.py[cod]
 
+.next
+frontend/.next
