@@ -2,7 +2,7 @@
 .next/
 .frontend/.next/
 .frontend/out/
-frontend/.next/
+# frontend/.next/
 
 # Next.js specific cache files
 .frontend/.next/cache/*
