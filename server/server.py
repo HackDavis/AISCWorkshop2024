@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
 # from algorithm import run_algorithm
 from main import run_algorithm
+from eda import analysis
 from flask_restful import Api, Resource
 
 app = Flask(__name__)
@@ -24,10 +25,15 @@ def return_home():
         'people': ["Aa", "Bb", "Cc"]
     })
 
-@app.route('/first-image', methods = ['GET'])
+@app.route('/first_image', methods = ['GET'])
 def get_image():
     result = run_algorithm(all_models)
     return send_file('first_graph.png', mimetype='image/png')
+
+@app.route('/analysis', methods = ['GET'])
+def analyse():
+    # analysis()
+    return send_file('analysis.png', mimetype='image/png')
 
 @app.route('/models', methods = ['GET', 'POST'])
 def get_models():
@@ -44,7 +50,7 @@ def get_models():
             result = run_algorithm(models_to_run)
             return jsonify({
                 'models': result
-            })
+            }), 200
         except Exception as e:
                 return jsonify({
                     'error': 'Invalid request',
