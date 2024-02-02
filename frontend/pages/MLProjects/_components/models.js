@@ -1,11 +1,8 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import axios from 'axios';
-import dotenv from 'dotenv';
+import axios from "axios";
 // Define an interface for the model data
-
-dotenv.config();
 
 const Models = () => {
     // const [modelData, setModelData] = useState<ModelData | null>(null);
@@ -14,7 +11,7 @@ const Models = () => {
     useEffect(() => {
         const fetchModelData = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/models`);
+                const response = await axios.get(`https://aisc-workshop2024.vercel.app/models`);
                 console.log("response data", response.data.models);
                 setModelData(response.data.models);
                 console.log("model data", modelData);

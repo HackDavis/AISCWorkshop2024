@@ -3,6 +3,8 @@
 .frontend/.next/
 .frontend/out/
 frontend/.next/
+frontend/.next/cache/webpack/*
+frontend/.next/cache/webpack/
 
 # Next.js specific cache files
 .frontend/.next/cache/*
@@ -21,3 +23,4 @@ server/venv
 __pycache__/
 *.py[cod]
 
+server/venv
