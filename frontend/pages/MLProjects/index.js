@@ -3,6 +3,7 @@ import styles from '../../styles/Home.module.scss';
 import Image from 'next/image';
 import Graph from './_components/graph';
 import Models from './_components/models';
+import Analysis from './_components/analysis';
 
 export default function Home() {
   return (
@@ -15,7 +16,9 @@ export default function Home() {
           <div className={styles.container_inside_window_Card} >
             <Models />
           </div>
-          <div className={styles.container_inside_window_Card} />
+          <div className={styles.container_inside_window_Card}>
+            <Analysis/>
+            </div>
           <div className={styles.container_inside_window_Card} />
         </div>
         <div className={styles.container_inside_animals}>

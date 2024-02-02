@@ -17,6 +17,7 @@ frontend/.next/cache/webpack/
 
 node_modules/
 .env
+server/venv
 
 # python cache files
 __pycache__/

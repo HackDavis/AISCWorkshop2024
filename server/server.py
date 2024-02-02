@@ -1,6 +1,8 @@
-from flask import Flask, jsonify, send_file
+from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
-from algorithm import run_algorithm
+# from algorithm import run_algorithm
+from main import run_algorithm
+from eda import analysis
 from flask_restful import Api, Resource
 
 app = Flask(__name__)
@@ -8,6 +10,7 @@ app = Flask(__name__)
 CORS(app)
 api = Api(app)
 
+all_models = ['logistic_regression', 'k_nearest_neighbors', 'support_vector_machine', 'decision_tree', 'random_forest', 'gradient_boosting', 'naive_bayes', 'neural_network', 'ada_boost', 'xg_boost']
 @app.after_request
 def after_request(response):
     response.headers.add('Access-Control-Allow-Origin', '*')
@@ -22,18 +25,38 @@ def return_home():
         'people': ["Aa", "Bb", "Cc"]
     })
 
-@app.route('/first_image')
+@app.route('/first_image', methods = ['GET'])
 def get_image():
-    result = run_algorithm()
+    result = run_algorithm(all_models)
     return send_file('first_graph.png', mimetype='image/png')
 
-@app.route('/models')
+@app.route('/analysis', methods = ['GET'])
+def analyse():
+    # analysis()
+    return send_file('analysis.png', mimetype='image/png')
+
+@app.route('/models', methods = ['GET', 'POST'])
 def get_models():
-    result = run_algorithm()
-    # print("xgb", result['XGBoost'])
-    return jsonify({
-        'models': result
-    })
+    if request.method == 'GET':
+        result = run_algorithm(all_models)  
+        return jsonify({
+            'models': result
+        })
+
+    if request.method == 'POST':
+        try:
+            data = request.json
+            models_to_run = data.get('models')
+            result = run_algorithm(models_to_run)
+            return jsonify({
+                'models': result
+            }), 200
+        except Exception as e:
+                return jsonify({
+                    'error': 'Invalid request',
+                    'details': str(e)
+                }), 400
+    
 
 # @app.route('/download_first_graph')
 # def download_first_graph():
