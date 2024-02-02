@@ -10,7 +10,7 @@ const Graph = () => {
     useEffect(() => {
         const fetchImage = async () => {
             try {
-                const response = await axios.get(`https://aisc-workshop2024.vercel.app/first_image`, { responseType: 'blob' });
+                const response = await axios.get(`http://localhost:8080/first_image`, { responseType: 'blob' });
                 const imageUrl = URL.createObjectURL(response.data);
                 console.log("image url", imageUrl);
                 setImageUrl(imageUrl);

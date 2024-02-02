@@ -1,45 +1,40 @@
-$bg-color: #123041;
-$box-bg-color: #173A52;
-
 .container{
-    background-color: $bg-color;
-    width: 100%;
+    background-color: #000;
+    // width: 100%;
     height: 100vh;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+
+    display: flex; 
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    // padding: 50px; 
+
+    &_title{
+        color: #fff;
+        font-size: 4rem;   
+        font-family: 'Courier New', Courier, monospace;
+    }
 
     &_inside{
         display: flex;
-        flex-direction: column;
-        background-color: $box-bg-color;
-        padding: 20px;
+        width: 1000px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &_button{
+        padding: 30px 30px;
+        border: none;
         border-radius: 10px;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-        height: 80vh;
-        
-        &_window{
-            width: 100%;
-            height: 90%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            flex-wrap: wrap;
-            // border: 1px solid black;
-            gap: 30px;
-
-            &_Card{
-                padding: 20px;
-                flex-shrink: 0;
-                border-radius: 20px;
-                background: #F1E1CE;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-        }
-        &_animals{
-            padding: 10px;
-            align-self: flex-end;
+        background-color: #72cb95;
+        color: #000;
+        font-size: 1.5rem;
+        font-family: 'Courier New', Courier, monospace;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover{
+            background-color: #fff;
+            color: #000;
         }
     }
 }
