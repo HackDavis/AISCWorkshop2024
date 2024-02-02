@@ -5,7 +5,7 @@
 frontend/.next/
 
 # Next.js specific cache files
-.frontend/.next/cache/
+.frontend/.next/cache/*
 
 # Next.js tracing files
 .frontend/.next/trace
