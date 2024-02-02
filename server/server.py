@@ -6,10 +6,17 @@ from eda import analysis
 from flask_restful import Api, Resource
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:3000", "http://localhost:3001"])
+
+CORS(app)
 api = Api(app)
 
 all_models = ['logistic_regression', 'k_nearest_neighbors', 'support_vector_machine', 'decision_tree', 'random_forest', 'gradient_boosting', 'naive_bayes', 'neural_network', 'ada_boost', 'xg_boost']
+@app.after_request
+def after_request(response):
+    response.headers.add('Access-Control-Allow-Origin', '*')
+    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+    response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
+    return response
 
 @app.route("/", methods=['GET'])
 def return_home():
