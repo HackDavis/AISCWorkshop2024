@@ -55,6 +55,11 @@ Node.js is a runtime environment that is used to run Javascript code and is need
 
     c. Check for **C:\Program Files\nodejs\\** in the list of paths that appear. If it's not there, click on New and add it to the list. Restart VSCode and it should work now.
 
+#### Python
+We need to download python locally to run our Flask server.
+1. Please download Python here: https://www.python.org/downloads/. Be sure to download the correct installer as per your system (Windows/MacOS)
+2. Run the Installer.
+
 ## Repository
 To use git's version control, let's create and set up our repo :>
 
@@ -88,13 +93,26 @@ cheatsheet: https://education.github.com/git-cheat-sheet-education.pdf
 [Some devices use **pip** while others use **pip3**. run ```pip --version``` or ```pip3 --version``` on a terminal to check which version you've got]
 
 Run these commands to set up your python virtual environment with necessary dependencies:
+
+First, go to the server directory.
 ```bash
 cd server
+```
+
+Next, create a virtual environment. This is always a goood practice when you run any Python project locally on your device. (This is not needed when running on Google Collab!)
+```bash
 python -m venv venv
+```
+Activate your virtual environment:
+```bash
 # Windows users:
 .\venv\Scripts\activate
 # Mac/Linux users:
 source venv/bin/activate
+```
+
+Install all the python dependencies (like numpy, pandas, etc)
+```bash
 pip install -r requirements.txt
 ```
 
