@@ -26,3 +26,4 @@ __pycache__/
 server/venv
 myenv
 server/myenv
+server/myenv/Lib/site-packages
