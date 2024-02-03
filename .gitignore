@@ -24,3 +24,4 @@ __pycache__/
 *.py[cod]
 
 server/venv
+server/myenv

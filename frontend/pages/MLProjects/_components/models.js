@@ -34,7 +34,7 @@ const Models = ({ props }) => {
                             <h2>Model: {key}</h2>
                             <p>AUC Score: {modelData[key].auc_score}</p>
                             <h3>Classification Report:</h3>
-                            <pre>{JSON.stringify(modelData[key].classification_report, null, 2)}</pre>
+                            <pre>Accuracy: {JSON.stringify(modelData[key].classification_report["accuracy"], null, 2)}</pre>
                         </div>
                     ))}
                 </div>
