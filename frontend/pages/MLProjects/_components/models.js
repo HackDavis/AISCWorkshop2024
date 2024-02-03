@@ -7,7 +7,7 @@ import axios from "axios";
 const Models = ({ props }) => {
     // const [modelData, setModelData] = useState<ModelData | null>(null);
     const [modelData, setModelData] = useState(null);
-    const local_server_endpoint = "" // TODO
+    const local_server_endpoint = "http://localhost:8080" // TODO
 
     useEffect(() => {
         const fetchModelData = async () => {
