@@ -8,13 +8,13 @@ dotenv.config();
 
 const Analysis = () => {
     const [imageUrl, setImageUrl] = useState('');
-
+    const local_server_endpoint = process.env.NEXT_PUBLIC_LOCAL_SERVER_ENDPOINT;
     useEffect(() => {
         const fetchImage = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/analysis`, { responseType: 'blob' });
+                const response = await axios.get(`${local_server_endpoint}/analysis`, { responseType: 'blob' });
                 const imageUrl = URL.createObjectURL(response.data);
-                console.log("image url", imageUrl);
+                // console.log("image url", imageUrl);
                 setImageUrl(imageUrl);
             } catch (error) {
                 console.error('Error fetching image:', error);

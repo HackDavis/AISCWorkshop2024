@@ -33,6 +33,7 @@ $box-bg-color: #173A52;
                 border-radius: 20px;
                 background: #F1E1CE;
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
             }
@@ -42,4 +43,38 @@ $box-bg-color: #173A52;
             align-self: flex-end;
         }
     }
+
+    &_checklist_container{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-auto-rows: minmax(20px, auto); // Add this line
+        align-items: center;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 15px;
+
+
+        &_inside{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-auto-rows: minmax(20px, auto); // Add this line
+            justify-content: start;
+        }
+
+        &_button{
+            margin-top: 30px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #F1E1CE;
+            color: #123041;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover{
+                background-color: #123041;
+                color: #F1E1CE;
+            }
+        }
+    }
 }
+
