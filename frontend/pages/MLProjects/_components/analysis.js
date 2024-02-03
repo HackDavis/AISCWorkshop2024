@@ -8,7 +8,7 @@ dotenv.config();
 
 const Analysis = () => {
     const [imageUrl, setImageUrl] = useState('');
-    const local_server_endpoint = "https://aiscworkshop2024-production.up.railway.app"
+    const local_server_endpoint = "" // TODO
     useEffect(() => {
         const fetchImage = async () => {
             try {

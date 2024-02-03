@@ -7,7 +7,7 @@ import axios from "axios";
 const Models = ({ props }) => {
     // const [modelData, setModelData] = useState<ModelData | null>(null);
     const [modelData, setModelData] = useState(null);
-    const local_server_endpoint = "https://aiscworkshop2024-production.up.railway.app"
+    const local_server_endpoint = "" // TODO
 
     useEffect(() => {
         const fetchModelData = async () => {
