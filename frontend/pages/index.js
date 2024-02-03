@@ -1,10 +1,10 @@
-
+import IndexMSG from "./_components/indexMSG";
 
 export default function Home() {
     return (
-        <div >
-            this is hackdavis home page.
-
+        <div>
+            <h1>HOME</h1>
+            <IndexMSG />
         </div>
-    );
+    )
 }
