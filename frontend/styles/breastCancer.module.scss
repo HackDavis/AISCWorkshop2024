@@ -1,0 +1,80 @@
+$bg-color: #123041;
+$box-bg-color: #173A52;
+
+.container{
+    background-color: $bg-color;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+
+    &_inside{
+        display: flex;
+        flex-direction: column;
+        background-color: $box-bg-color;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+        height: 80vh;
+        
+        &_window{
+            width: 100%;
+            height: 90%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            flex-wrap: wrap;
+            // border: 1px solid black;
+            gap: 30px;
+
+            &_Card{
+                padding: 20px;
+                flex-shrink: 0;
+                border-radius: 20px;
+                background: #F1E1CE;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        &_animals{
+            padding: 10px;
+            align-self: flex-end;
+        }
+    }
+
+    &_checklist_container{
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-auto-rows: minmax(20px, auto); // Add this line
+        align-items: center;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 15px;
+
+
+        &_inside{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-auto-rows: minmax(20px, auto); // Add this line
+            justify-content: start;
+        }
+
+        &_button{
+            margin-top: 30px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #F1E1CE;
+            color: #123041;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover{
+                background-color: #123041;
+                color: #F1E1CE;
+            }
+        }
+    }
+}
+
