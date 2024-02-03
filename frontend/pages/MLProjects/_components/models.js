@@ -11,7 +11,7 @@ const Models = () => {
     useEffect(() => {
         const fetchModelData = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/models`);
+                const response = await axios.get(`https://aiscworkshop2024-production.up.railway.app/models`);
                 console.log("response data", response.data.models);
                 setModelData(response.data.models);
                 console.log("model data", modelData);

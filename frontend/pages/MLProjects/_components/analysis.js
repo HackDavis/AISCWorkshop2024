@@ -12,7 +12,7 @@ const Analysis = () => {
     useEffect(() => {
         const fetchImage = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/analysis`, { responseType: 'blob' });
+                const response = await axios.get(`https://aiscworkshop2024-production.up.railway.app/analysis`, { responseType: 'blob' });
                 const imageUrl = URL.createObjectURL(response.data);
                 console.log("image url", imageUrl);
                 setImageUrl(imageUrl);
